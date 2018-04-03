@@ -1,0 +1,61 @@
+//Convert pixels to rems
+@function calculateRem($size) {
+  //check if come and 'auto' value
+  @if type_of($size) == 'number' {
+
+    //If come px calculate the vale, if not do nothing
+    $remSize: if(unit($size) == 'px', ($size / 16px), $size);
+
+    @return $remSize * 1rem;
+
+  } @else {
+    @return $size;
+  }
+}
+/**
+ * Set the font size and line-height to rem with a px fallback
+ */
+@mixin font-size($size) {
+  //font-size: $size;
+  font-size: calculateRem($size);
+  //line-height: $size;
+  line-height: calculateRem($size);
+}
+/**
+ * Set the line-height to rem with a px fallback
+ */
+@mixin line-height($size) {
+  //line-height: $size;
+  line-height: calculateRem($size);
+}
+
+/**
+ * Set the top property to rem with a px fallback
+ */
+@mixin top($size) {
+  //top: $size;
+  top: calculateRem($size);
+}
+
+/**
+ * Set the right property to rem with a px fallback
+ */
+@mixin right($size) {
+  //right: $size;
+  right: calculateRem($size);
+}
+/**
+ * Set the bottom property to rem with a px fallback
+ */
+@mixin bottom($size) {
+  //bottom: $size;
+  bottom: calculateRem($size);
+}
+
+/**
+ * Set the left property to rem with a px fallback
+ */
+@mixin left($size) {
+  //left: $size;
+  left: calculateRem($size);
+}

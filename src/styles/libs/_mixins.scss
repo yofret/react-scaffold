@@ -1,0 +1,18 @@
+@import "mixins/includes";
+@import "mixins/margin";
+@import "mixins/padding";
+@import "mixins/responsive";
+
+@mixin truncate($width: 5rem){
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $width;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

@@ -1,0 +1,60 @@
+/**
+ * Collection of mixin to use padding properly
+ * input a value using px to convert into rem base 16
+ */
+@mixin padding($top:0, $right:0, $bottom:0, $left:0) {
+  //padding: {
+  //  top: $top;
+  //  right: $right;
+  //  bottom: $bottom;
+  //  left: $left;
+  //}
+  padding: {
+    top: calculateRem($top);
+    right: calculateRem($right);
+    bottom: calculateRem($bottom);
+    left: calculateRem($left);
+  }
+}
+
+//When you want to use vertical and horizontal padding (open to a better name)
+@mixin twoValuePadding($vertical:0, $horizontal:0) {
+  //padding: $vertical $horizontal;
+  padding: calculateRem($vertical) calculateRem($horizontal);
+}
+
+@mixin paddingTop($value) {
+  //padding: {
+  //  top: $value;
+  //}
+  padding: {
+    top: calculateRem($value);
+  }
+}
+
+@mixin paddingRight($value) {
+  //padding: {
+  //  right: $value;
+  //}
+  padding: {
+    right: calculateRem($value);
+  }
+}
+
+@mixin paddingBottom($value) {
+  //padding: {
+  //  bottom: $value;
+  //}
+  padding: {
+    bottom: calculateRem($value);
+  }
+}
+
+@mixin paddingLeft($value) {
+  //padding: {
+  //  left: $value;
+  //}
+  padding: {
+    left: calculateRem($value);
+  }
+}

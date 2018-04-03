@@ -1,0 +1,46 @@
+$fontLight:   'Roboto-Light', sans-serif;
+$fontReg:   'Roboto-Regular', sans-serif;
+$fontMedium: 'Roboto-Medium', sans-serif;
+$fontBold: 'Roboto-Bold', sans-serif;
+$fontBlack:   'Roboto-Black', sans-serif;
+$fontItalic: 'Roboto-Italic', sans-serif;
+$fontLightItalic: 'Roboto-LightItalic', sans-serif;
+$fontBoldItalic: 'Roboto-BoldItalic', sans-serif;
+
+
+// Quick access typography
+.font-light {
+  font-family: $fontLight;
+  font-weight: 300;
+}
+.font-regular {
+  font-family: $fontReg;
+  font-weight: 400;
+}
+.font-medium {
+  font-family: $fontMedium;
+  font-weight: 500;
+}
+.font-bold {
+  font-family: $fontBold;
+  font-weight: 700;
+}
+.font-black {
+  font-family: $fontBlack;
+  font-weight: 900;
+}
+.font-light-italic {
+  font-family: $fontLightItalic;
+  font-weight: 300;
+}
+
+.font-italic {
+  font-family: $fontItalic;
+  font-weight: 400;
+}
+
+.font-light-bold-italic {
+  font-family: $fontBoldItalic;
+  font-weight: 700;
+}
+

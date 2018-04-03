@@ -1,0 +1,60 @@
+/**
+ * Collection of mixin to use margin properly
+ * input a value using px to convert into rem base 16
+ */
+@mixin margin($top:0, $right:0, $bottom:0, $left:0) {
+  //margin: {
+  //  top: $top;
+  //  right: $right;
+  //  bottom: $bottom;
+  //  left: $left;
+  //}
+  margin: {
+    top: calculateRem($top);
+    right: calculateRem($right);
+    bottom: calculateRem($bottom);
+    left: calculateRem($left);
+  }
+}
+
+//When you want to use vertical and horizontal margin (open to a better name)
+@mixin twoValueMargin($vertical:0, $horizontal:0) {
+  //margin: $vertical $horizontal;
+  margin: calculateRem($vertical) calculateRem($horizontal);
+}
+
+@mixin marginTop($value) {
+  //margin: {
+  //  top: $value;
+  //}
+  margin: {
+    top: calculateRem($value);
+  }
+}
+
+@mixin marginRight($value) {
+  //margin: {
+  //  right: $value;
+  //}
+  margin: {
+    right: calculateRem($value);
+  }
+}
+
+@mixin marginBottom($value) {
+  //margin: {
+  //  bottom: $value;
+  //}
+  margin: {
+    bottom: calculateRem($value);
+  }
+}
+
+@mixin marginLeft($value) {
+  //margin: {
+  //  left: $value;
+  //}
+  margin: {
+    left: calculateRem($value);
+  }
+}

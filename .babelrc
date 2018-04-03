@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "react",
+    [ "env", {
+      "targets": {
+      "browsers": "> 2%"
+      }
+    }],
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+      "react-hot-loader/babel"
+      ]
+    },
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
+}
